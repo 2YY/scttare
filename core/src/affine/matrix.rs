@@ -16,21 +16,21 @@ pub fn multiply(a: Matrix, b: Matrix) -> Matrix {
 }
 
 #[cfg(test)]
-mod tests {
+mod matrix_tests {
     use super::*;
 
     #[test]
     fn should_be_multiplied_correctly() {
-        let A: Matrix = [
+        let a: Matrix = [
             [1., 2., 3.],
             [4., 5., 6.]
         ];
-        let B: Matrix = [
+        let b: Matrix = [
             [7., 8., 9.],
             [10., 11., 12.]
         ];
 
-        let result: Matrix = multiply(A, B);
+        let result: Matrix = multiply(a, b);
 
         assert_eq!(result, [
            [27., 30., 36.],
