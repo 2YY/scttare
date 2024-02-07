@@ -1,4 +1,4 @@
-type Matrix = [[f64;3];2];
+pub type Matrix = [[f64;3];2];
 
 pub fn multiply(a: Matrix, b: Matrix) -> Matrix {
     [
