@@ -13,6 +13,13 @@ pub fn translate(tx: f64, ty: f64) -> Matrix {
     ]
 }
 
+pub fn scale(sx: f64, sy: f64) -> Matrix {
+    [
+        [sx, 0., 0.],
+        [0., sy, 0.]
+    ]
+}
+
 #[cfg(test)]
 mod transform_tests {
     use super::*;
@@ -21,6 +28,12 @@ mod transform_tests {
     fn should_translated_correctly() {
         let result: Point = transform(1., 2., translate(3., 4.));
         assert_eq!(result, (4., 6.));
+    }
+
+    #[test]
+    fn should_scaled_correctly() {
+        let result: Point = transform(1., 2., scale(3., 4.));
+            assert_eq!(result, (3., 8.));
     }
 }
 
