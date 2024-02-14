@@ -4,8 +4,8 @@ jobs:
   Lint:
     runs-on: ubuntu-latest
     defaults:
-      shell: bash
-      working-directory: ./core
+      run:
+        working-directory: ./core
     steps:
       - name: Checking out Git repository
         uses: actions/checkout@v4
@@ -23,8 +23,8 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     defaults:
-      shell: bash
-      working-directory: ./core
+      run:
+        working-directory: ./core
     steps:
       - name: Checking out Git repository
         uses: actions/checkout@v4
