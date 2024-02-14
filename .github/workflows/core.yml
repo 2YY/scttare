@@ -4,6 +4,7 @@ jobs:
   Lint:
     runs-on: ubuntu-latest
     defaults:
+      shell: bash
       working-directory: ./core
     steps:
       - name: Checking out Git repository
@@ -22,6 +23,7 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     defaults:
+      shell: bash
       working-directory: ./core
     steps:
       - name: Checking out Git repository
